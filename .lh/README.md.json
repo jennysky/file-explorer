@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1720581632018,
@@ -36,6 +36,18 @@
                 {
                     "date": 1720581699968,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n # React + TypeScript + Vite\n  to install use node v18.19.0\n \n \n- to run project: \n+to run project: \n+\n npm i\n npm run dev\n \n"
+                },
+                {
+                    "date": 1720590125143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n # React + TypeScript + Vite\n  to install use node v18.19.0\n \n \n-to run project: \n+To run project: \n \n npm i\n npm run dev\n \n"
+                },
+                {
+                    "date": 1720590131598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n # React + TypeScript + Vite\n  to install use node v18.19.0\n \n \n-To run project: \n+To run the project: \n \n+```\n npm i\n npm run dev\n \n"
+                },
+                {
+                    "date": 1720590139665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n # React + TypeScript + Vite\n- to install use node v18.19.0\n+o install use node v18.19.0\n \n \n To run the project: \n \n ```\n npm i\n npm run dev\n-\n+```\n"
                 }
             ],
             "date": 1720581632018,
