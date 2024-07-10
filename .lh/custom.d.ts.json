@@ -1,0 +1,18 @@
+{
+    "sourceFile": "custom.d.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1720570978891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1720570978890,
+            "name": "Commit-0",
+            "content": "declare module '*.svg' {\n  import React = require('react');\n  export const ReactComponent: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;\n  const src: string;\n  export default src;\n}"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1720581632018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720581640483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n # React + TypeScript + Vite\n+ to install use node \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720581670010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,5 @@\n # React + TypeScript + Vite\n- to install use node \n\\ No newline at end of file\n+ to install use node v18.19.0\n+\n+\n+ to run \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720581677326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n # React + TypeScript + Vite\n  to install use node v18.19.0\n \n \n- to run \n\\ No newline at end of file\n+ to run : \n+  npm run dev\n+\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720581682692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n  to install use node v18.19.0\n \n \n  to run : \n+ npm i\n   npm run dev\n \n\\ No newline at end of file\n-  \n"
+                },
+                {
+                    "date": 1720581687780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n \n \n  to run : \n  npm i\n-  npm run dev\n+npm run dev\n \n"
+                },
+                {
+                    "date": 1720581693614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n # React + TypeScript + Vite\n  to install use node v18.19.0\n \n \n- to run : \n- npm i\n+ to run project: \n+npm i\n npm run dev\n+\n"
+                },
+                {
+                    "date": 1720581699968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n # React + TypeScript + Vite\n  to install use node v18.19.0\n \n \n- to run project: \n+to run project: \n+\n npm i\n npm run dev\n \n"
+                }
+            ],
+            "date": 1720581632018,
+            "name": "Commit-0",
+            "content": "# React + TypeScript + Vite\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/assets/folder.svg",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1720568330669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720572638792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-<svg width=\"16\" height=\"16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1.5 12V4A1.5 1.5 0 0 1 3 2.5h2.394a1.5 1.5 0 0 1 .832.252L8.22 4.08a2.5 2.5 0 0 0 1.387.42H13A1.5 1.5 0 0 1 14.5 6v6a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 12Z\" stroke=\"currentColor\"></path></svg>\n\\ No newline at end of file\n+<svg width=\"16\" height=\"16\" fill=\"#637191\" xmlns=\"http://www.w3.org/2000/svg\">\n+    <path\n+        d=\"M1.5 12V4A1.5 1.5 0 0 1 3 2.5h2.394a1.5 1.5 0 0 1 .832.252L8.22 4.08a2.5 2.5 0 0 0 1.387.42H13A1.5 1.5 0 0 1 14.5 6v6a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 12Z\"\n+        stroke=\"currentColor\"></path>\n+</svg>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1720568330669,
+            "name": "Commit-0",
+            "content": "<svg width=\"16\" height=\"16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1.5 12V4A1.5 1.5 0 0 1 3 2.5h2.394a1.5 1.5 0 0 1 .832.252L8.22 4.08a2.5 2.5 0 0 0 1.387.42H13A1.5 1.5 0 0 1 14.5 6v6a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 12Z\" stroke=\"currentColor\"></path></svg>"
+        }
+    ]
+}

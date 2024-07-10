@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/services/api-service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1720573265107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720573271704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export const \n\\ No newline at end of file\n+export const fetchRoo\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720573282829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export const fetchRoo\n\\ No newline at end of file\n+export const fetchRootDirect\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720573287974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,6 @@\n-export const fetchRootDirect\n\\ No newline at end of file\n+export const fetchRootDirectory = async () => {\n+\n+    return fetch(\"http://localhost:3001/api/directory\")\n+        .then((response) => response.json())\n+        .then((data) => data);\n+    }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720573295286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n+import { waitFor } from \"../utils/mock-util\"\n+\n export const fetchRootDirectory = async () => {\n \n-    return fetch(\"http://localhost:3001/api/directory\")\n-        .then((response) => response.json())\n\\ No newline at end of file\n-        .then((data) => data);\n-    }\n+    waitFor\n+  return fetch(\"http://localhost:3001/api/directory\")\n+    .then((response) => response.json())\n+    .then((data) => data)\n+}\n"
+                },
+                {
+                    "date": 1720573300634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { waitFor } from \"../utils/mock-util\"\n \n export const fetchRootDirectory = async () => {\n \n-    waitFor(1000)\n+    waitFor(2000)\n   return fetch(\"http://localhost:3001/api/directory\")\n     .then((response) => response.json())\n     .then((data) => data)\n }\n"
+                },
+                {
+                    "date": 1720573333897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export const fetchRootDirectory = async () => {\n \n     waitFor(2000);\n     return new Promise((resolve, reject) => {\n-        resolve(init)\n+        resolve(initDaata)\n     }\n   \n }\n"
+                }
+            ],
+            "date": 1720573265106,
+            "name": "Commit-0",
+            "content": "export const "
+        }
+    ]
+}

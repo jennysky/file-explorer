@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/contexts/FileExplorer/FileExplorerProvider.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1720563859592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720563865918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,37 @@\n-FileExplorer\n\\ No newline at end of file\n+import React, { createContext, useContext, useState } from \"react\";\n+import { type Directory } from \"./components/FileExplorer\";\n+\n+// Define the context shape\n+interface FileExplorerContextType {\n+  directory: Directory;\n+  setDirectory: React.Dispatch<React.SetStateAction<Directory>>;\n+}\n+\n+// Create the context with a default undefined value\n+const FileExplorerContext = createContext<FileExplorerContextType | undefined>(undefined);\n+\n+// Create the provider component\n+export const FileExplorerProvider: React.FC = ({ children }) => {\n+  const [directory, setDirectory] = useState<Directory>({\n+    id: \"root\",\n+    name: \"Root\",\n+    type: \"directory\",\n+    isOpen: true,\n+    children: [],\n+  });\n+\n+  return (\n+    <FileExplorerContext.Provider value={{ directory, setDirectory }}>\n+      {children}\n+    </FileExplorerContext.Provider>\n+  );\n+};\n+\n+// Hook to use the file explorer context\n+export const useFileExplorer = () => {\n+  const context = useContext(FileExplorerContext);\n+  if (context === undefined) {\n+    throw new Error(\"useFileExplorer must be used within a FileExplorerProvider\");\n+  }\n+  return context;\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720564943912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n     isOpen: true,\n     children: [],\n   });\n \n+  \n+\n   return (\n     <FileExplorerContext.Provider value={{ directory, setDirectory }}>\n       {children}\n     </FileExplorerContext.Provider>\n"
+                },
+                {
+                    "date": 1720564953845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     isOpen: true,\n     children: [],\n   });\n \n-  \n+  const to\n \n   return (\n     <FileExplorerContext.Provider value={{ directory, setDirectory }}>\n       {children}\n"
+                },
+                {
+                    "date": 1720564959598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,17 @@\n     isOpen: true,\n     children: [],\n   });\n \n-  const to\n+  const toggleDirectory = (id: string) => {\n+    const toggle = (dir: Directory): Directory => ({\n+      ...dir,\n+      isOpen: dir.id === id ? !dir.isOpen : dir.isOpen,\n+    });\n \n+    setDirectory(toggle(directory));\n+  }\n+\n   return (\n     <FileExplorerContext.Provider value={{ directory, setDirectory }}>\n       {children}\n     </FileExplorerContext.Provider>\n"
+                },
+                {
+                    "date": 1720564988590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n     isOpen: true,\n     children: [],\n   });\n \n+  const \n+\n   const toggleDirectory = (id: string) => {\n     const toggle = (dir: Directory): Directory => ({\n       ...dir,\n       isOpen: dir.id === id ? !dir.isOpen : dir.isOpen,\n"
+                },
+                {
+                    "date": 1720564997303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     isOpen: true,\n     children: [],\n   });\n \n-  const \n+  const []\n \n   const toggleDirectory = (id: string) => {\n     const toggle = (dir: Directory): Directory => ({\n       ...dir,\n"
+                },
+                {
+                    "date": 1720565014067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     isOpen: true,\n     children: [],\n   });\n \n-  const []\n+  const \n \n   const toggleDirectory = (id: string) => {\n     const toggle = (dir: Directory): Directory => ({\n       ...dir,\n"
+                },
+                {
+                    "date": 1720565019731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     isOpen: true,\n     children: [],\n   });\n \n-  const \n+  const openFolders\n \n   const toggleDirectory = (id: string) => {\n     const toggle = (dir: Directory): Directory => ({\n       ...dir,\n"
+                },
+                {
+                    "date": 1720565028089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     isOpen: true,\n     children: [],\n   });\n \n-  const openFolders\n+  const openFolderById\n \n   const toggleDirectory = (id: string) => {\n     const toggle = (dir: Directory): Directory => ({\n       ...dir,\n"
+                },
+                {
+                    "date": 1720565033936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     isOpen: true,\n     children: [],\n   });\n \n-  const openFolderById\n+  const openFolderById = use\n \n   const toggleDirectory = (id: string) => {\n     const toggle = (dir: Directory): Directory => ({\n       ...dir,\n"
+                },
+                {
+                    "date": 1720565040200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     isOpen: true,\n     children: [],\n   });\n \n-  const openFolderById = useMemo()\n+  const openFolderById = useMemo(() => {})\n \n   const toggleDirectory = (id: string) => {\n     const toggle = (dir: Directory): Directory => ({\n       ...dir,\n"
+                },
+                {
+                    "date": 1720565129598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,48 @@\n+import React, { createContext, useContext, useState } from \"react\"\n+import { type Directory } from \"./components/FileExplorer\"\n+\n+// Define the context shape\n+interface FileExplorerContextType {\n+  directory: Directory\n+  setDirectory: React.Dispatch<React.SetStateAction<Directory>>\n+}\n+\n+// Create the context with a default undefined value\n+const FileExplorerContext = createContext<FileExplorerContextType | undefined>(\n+  undefined\n+)\n+\n+// Create the provider component\n+export const FileExplorerProvider: React.FC = ({ children }) => {\n+  const [directory, setDirectory] = useState<Directory>({\n+    id: \"root\",\n+    name: \"Root\",\n+    type: \"directory\",\n+    isOpen: true,\n+    children: [],\n+  })\n+\n+  const [openFolderById, setOpenFolderById] = useState<any>({})\n+\n+  const toggleDirectory = (id: string) => {\n+    setOpenFolderById((prev) => ({\n+      ...prev,\n+      [id]: !prev[id],\n+    }))\n+  }\n+\n+  return (\n+    <FileExplorerContext.Provider value={{ directory, setDirectory, openFolderById }}>\n+      {children}\n+    </FileExplorerContext.Provider>\n+  )\n+}\n+\n+// Hook to use the file explorer context\n+export const useFileExplorer = () => {\n+  const context = useContext(FileExplorerContext)\n+  if (context === undefined) {\n+    throw new Error(\"useFileExplorer must be used within a FileExplorerProvider\")\n+  }\n+  return context\n+}\n"
+                }
+            ],
+            "date": 1720563859592,
+            "name": "Commit-0",
+            "content": "FileExplorer"
+        }
+    ]
+}

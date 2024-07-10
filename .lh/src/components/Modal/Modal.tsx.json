@@ -1,0 +1,118 @@
+{
+    "sourceFile": "src/components/Modal/Modal.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1720556825726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720556831383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,4 @@\n     </Dialog.Portal>\n   </Dialog.Root>\n );\n \n-export default DialogDemo;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720556841800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import * as Dialog from '@radix-ui/react-dialog';\n import { Cross2Icon } from '@radix-ui/react-icons';\n import './styles.css';\n \n-const DialogDemo = () => (\n+export const DialogDemo = () => (\n   <Dialog.Root>\n     <Dialog.Trigger asChild>\n       <button className=\"Button violet\">Edit profile</button>\n     </Dialog.Trigger>\n"
+                },
+                {
+                    "date": 1720556857236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import * as Dialog from '@radix-ui/react-dialog';\n import { Cross2Icon } from '@radix-ui/react-icons';\n import './styles.css';\n \n-export const DialogDemo = () => (\n+export const TreeModal = () => (\n   <Dialog.Root>\n     <Dialog.Trigger asChild>\n       <button className=\"Button violet\">Edit profile</button>\n     </Dialog.Trigger>\n"
+                },
+                {
+                    "date": 1720558434259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,44 +1,24 @@\n-import React from 'react';\n-import * as Dialog from '@radix-ui/react-dialog';\n-import { Cross2Icon } from '@radix-ui/react-icons';\n-import './styles.css';\n+import React, { useState } from 'react';\n \n-export const TreeModal = () => (\n-  <Dialog.Root>\n-    <Dialog.Trigger asChild>\n-      <button className=\"Button violet\">Edit profile</button>\n-    </Dialog.Trigger>\n-    <Dialog.Portal>\n-      <Dialog.Overlay className=\"DialogOverlay\" />\n-      <Dialog.Content className=\"DialogContent\">\n-        <Dialog.Title className=\"DialogTitle\">Edit profile</Dialog.Title>\n-        <Dialog.Description className=\"DialogDescription\">\n-          Make changes to your profile here. Click save when you're done.\n-        </Dialog.Description>\n-        <fieldset className=\"Fieldset\">\n-          <label className=\"Label\" htmlFor=\"name\">\n-            Name\n-          </label>\n-          <input className=\"Input\" id=\"name\" defaultValue=\"Pedro Duarte\" />\n-        </fieldset>\n-        <fieldset className=\"Fieldset\">\n-          <label className=\"Label\" htmlFor=\"username\">\n-            Username\n-          </label>\n-          <input className=\"Input\" id=\"username\" defaultValue=\"@peduarte\" />\n-        </fieldset>\n-        <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>\n-          <Dialog.Close asChild>\n-            <button className=\"Button green\">Save changes</button>\n-          </Dialog.Close>\n+const Modal = () => {\n+  const [isOpen, setIsOpen] = useState(false);\n+\n+  const openModal = () => setIsOpen(true);\n+  const closeModal = () => setIsOpen(false);\n+\n+  return (\n+    <>\n+      <button onClick={openModal}>Open Modal</button>\n+      {isOpen && (\n+        <div className=\"modal-overlay\">\n+          <div className=\"modal-content\">\n+            <button onClick={closeModal}>Close</button>\n+            <p>This is a simple modal. You can place your content here.</p>\n+          </div>\n         </div>\n-        <Dialog.Close asChild>\n-          <button className=\"IconButton\" aria-label=\"Close\">\n-            <Cross2Icon />\n-          </button>\n-        </Dialog.Close>\n-      </Dialog.Content>\n-    </Dialog.Portal>\n-  </Dialog.Root>\n-);\n+      )}\n+    </>\n+  );\n+};\n \n+export default Modal;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720558439801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from 'react';\n \n-const Modal = () => {\n+export const Modal = () => {\n   const [isOpen, setIsOpen] = useState(false);\n \n   const openModal = () => setIsOpen(true);\n   const closeModal = () => setIsOpen(false);\n"
+                },
+                {
+                    "date": 1720558453611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import React, { useState } from 'react';\n \n+const \n+\n export const Modal = () => {\n   const [isOpen, setIsOpen] = useState(false);\n \n   const openModal = () => setIsOpen(true);\n@@ -20,5 +22,4 @@\n     </>\n   );\n };\n \n-export default Modal;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720558463303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from 'react';\n \n-const \n+const style\n \n export const Modal = () => {\n   const [isOpen, setIsOpen] = useState(false);\n \n"
+                },
+                {
+                    "date": 1720558477257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from 'react';\n \n-const style\n+const StyledOverlay = styled.div\n \n export const Modal = () => {\n   const [isOpen, setIsOpen] = useState(false);\n \n"
+                },
+                {
+                    "date": 1720558482622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import React, { useState } from 'react';\n \n-const StyledOverlay = styled.div\n+const StyledOverlay = styled.div`\n \n+`\n+\n export const Modal = () => {\n   const [isOpen, setIsOpen] = useState(false);\n \n   const openModal = () => setIsOpen(true);\n"
+                },
+                {
+                    "date": 1720558498152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React, { useState } from 'react';\n+import styled from 'styled-components';\n \n const StyledOverlay = styled.div`\n \n `\n"
+                },
+                {
+                    "date": 1720558506125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\n     <>\n       <button onClick={openModal}>Open Modal</button>\n       {isOpen && (\n-        <div className=\"modal-overlay\">\n+        <StyledOverlay className=\"modal-overlay\">\n           <div className=\"modal-content\">\n             <button onClick={closeModal}>Close</button>\n             <p>This is a simple modal. You can place your content here.</p>\n           </div>\n"
+                },
+                {
+                    "date": 1720558513375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import React, { useState } from 'react';\n+import styled from 'styled-components';\n+\n+const StyledOverlay = styled.div`\n+\n+`\n+\n+const StyledOverlay = styled.div`\n+\n+`\n+\n+export const Modal = () => {\n+  const [isOpen, setIsOpen] = useState(false);\n+\n+  const openModal = () => setIsOpen(true);\n+  const closeModal = () => setIsOpen(false);\n+\n+  return (\n+    <>\n+      <button onClick={openModal}>Open Modal</button>\n+      {isOpen && (\n+        <StyledOverlay className=\"modal-overlay\">\n+          <div className=\"modal-content\">\n+            <button onClick={closeModal}>Close</button>\n+            <p>This is a simple modal. You can place your content here.</p>\n+          </div>\n+        </StyledOverlay>\n+      )}\n+    </>\n+  );\n+};\n+\n"
+                },
+                {
+                    "date": 1720558529776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,20 @@\n import React, { useState } from 'react';\n import styled from 'styled-components';\n \n const StyledOverlay = styled.div`\n-\n+position: fixed;\n+  top: 0;\n+  left: 0;\n+  width: 100%;\n+  height: 100%;\n+  background-color: rgba(0, 0, 0, 0.5);\n+  display: flex;\n+  justify-content: center;\n+  align-items: center;\n `\n \n-const StyledOverlay = styled.div`\n+const StyledContent = styled.div`\n \n `\n \n export const Modal = () => {\n@@ -29,32 +37,4 @@\n     </>\n   );\n };\n \n-import React, { useState } from 'react';\n-import styled from 'styled-components';\n-\n-const StyledOverlay = styled.div`\n-\n-`\n-\n-export const Modal = () => {\n-  const [isOpen, setIsOpen] = useState(false);\n-\n-  const openModal = () => setIsOpen(true);\n-  const closeModal = () => setIsOpen(false);\n-\n-  return (\n-    <>\n-      <button onClick={openModal}>Open Modal</button>\n-      {isOpen && (\n-        <StyledOverlay className=\"modal-overlay\">\n-          <div className=\"modal-content\">\n-            <button onClick={closeModal}>Close</button>\n-            <p>This is a simple modal. You can place your content here.</p>\n-          </div>\n-        </div>\n-      )}\n-    </>\n-  );\n-};\n-\n"
+                },
+                {
+                    "date": 1720558535284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n   align-items: center;\n `\n \n const StyledContent = styled.div`\n-\n+background-color: white;\n+  padding: 20px;\n+  border-radius: 5px;\n `\n \n export const Modal = () => {\n   const [isOpen, setIsOpen] = useState(false);\n"
+                },
+                {
+                    "date": 1720558540468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n-import React, { useState } from 'react';\n-import styled from 'styled-components';\n+import React, { useState } from \"react\"\n+import styled from \"styled-components\"\n \n const StyledOverlay = styled.div`\n-position: fixed;\n+  position: fixed;\n   top: 0;\n   left: 0;\n   width: 100%;\n   height: 100%;\n@@ -13,30 +13,29 @@\n   align-items: center;\n `\n \n const StyledContent = styled.div`\n-background-color: white;\n+  background-color: white;\n   padding: 20px;\n   border-radius: 5px;\n `\n \n export const Modal = () => {\n-  const [isOpen, setIsOpen] = useState(false);\n+  const [isOpen, setIsOpen] = useState(false)\n \n-  const openModal = () => setIsOpen(true);\n-  const closeModal = () => setIsOpen(false);\n+  const openModal = () => setIsOpen(true)\n+  const closeModal = () => setIsOpen(false)\n \n   return (\n     <>\n       <button onClick={openModal}>Open Modal</button>\n       {isOpen && (\n         <StyledOverlay className=\"modal-overlay\">\n-          <div className=\"modal-content\">\n+          <StyledContent className=\"modal-content\">\n             <button onClick={closeModal}>Close</button>\n             <p>This is a simple modal. You can place your content here.</p>\n           </div>\n         </StyledOverlay>\n       )}\n     </>\n-  );\n-};\n-\n+  )\n+}\n"
+                },
+                {
+                    "date": 1720558571980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   padding: 20px;\n   border-radius: 5px;\n `\n \n-export const Modal = () => {\n+export const Modal = ({}) => {\n   const [isOpen, setIsOpen] = useState(false)\n \n   const openModal = () => setIsOpen(true)\n   const closeModal = () => setIsOpen(false)\n@@ -32,9 +32,9 @@\n         <StyledOverlay className=\"modal-overlay\">\n           <StyledContent className=\"modal-content\">\n             <button onClick={closeModal}>Close</button>\n             <p>This is a simple modal. You can place your content here.</p>\n-          </div>\n+          </StyledContent>\n         </StyledOverlay>\n       )}\n     </>\n   )\n"
+                },
+                {
+                    "date": 1720558623630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   padding: 20px;\n   border-radius: 5px;\n `\n \n-export const Modal = ({}) => {\n+export const Modal: React.FC<ModalProps>  = ({children}) => {\n   const [isOpen, setIsOpen] = useState(false)\n \n   const openModal = () => setIsOpen(true)\n   const closeModal = () => setIsOpen(false)\n"
+                },
+                {
+                    "date": 1720558631618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,12 @@\n   padding: 20px;\n   border-radius: 5px;\n `\n \n+interface ModalProps {\n+    children: ReactNode;\n+  }\n+\n export const Modal: React.FC<ModalProps>  = ({children}) => {\n   const [isOpen, setIsOpen] = useState(false)\n \n   const openModal = () => setIsOpen(true)\n"
+                },
+                {
+                    "date": 1720558638310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React, { useState } from \"react\"\n+import React, { useState, ReactNode } from \"react\"\n import styled from \"styled-components\"\n \n const StyledOverlay = styled.div`\n   position: fixed;\n@@ -19,12 +19,12 @@\n   border-radius: 5px;\n `\n \n interface ModalProps {\n-    children: ReactNode;\n-  }\n+  children: ReactNode\n+}\n \n-export const Modal: React.FC<ModalProps>  = ({children}) => {\n+export const Modal: React.FC<ModalProps> = ({ children }) => {\n   const [isOpen, setIsOpen] = useState(false)\n \n   const openModal = () => setIsOpen(true)\n   const closeModal = () => setIsOpen(false)\n"
+                },
+                {
+                    "date": 1720558651747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n       {isOpen && (\n         <StyledOverlay className=\"modal-overlay\">\n           <StyledContent className=\"modal-content\">\n             <button onClick={closeModal}>Close</button>\n-            <p>This is a simple modal. You can place your content here.</p>\n+            {children}\n           </StyledContent>\n         </StyledOverlay>\n       )}\n     </>\n"
+                },
+                {
+                    "date": 1720558711928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,10 @@\n   children: ReactNode\n }\n \n export const Modal: React.FC<ModalProps> = ({ children }) => {\n-  const [isOpen, setIsOpen] = useState(false)\n+ \n \n-  const openModal = () => setIsOpen(true)\n-  const closeModal = () => setIsOpen(false)\n-\n   return (\n     <>\n       <button onClick={openModal}>Open Modal</button>\n       {isOpen && (\n"
+                },
+                {
+                    "date": 1720581751185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n `\n \n interface ModalProps {\n   children: ReactNode\n+  \n }\n \n export const Modal: React.FC<ModalProps> = ({ children }) => {\n  \n"
+                },
+                {
+                    "date": 1720581870773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n `\n \n interface ModalProps {\n   children: ReactNode\n+\n   \n }\n \n export const Modal: React.FC<ModalProps> = ({ children }) => {\n"
+                },
+                {
+                    "date": 1720586095862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n `\n \n interface ModalProps {\n   children: ReactNode\n-  onClose\n+  onClose?\n }\n \n export const Modal: React.FC<ModalProps> = ({ children, onClose }) => {\n   return (\n"
+                },
+                {
+                    "date": 1720586245322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,49 @@\n+import React, { ReactNode } from \"react\"\n+import styled from \"styled-components\"\n+import { ReactComponent as Close } from \"../../assets/close.svg\"\n+\n+const StyledOverlay = styled.div`\n+  position: fixed;\n+  top: 0;\n+  left: 0;\n+  width: 100%;\n+  height: 100%;\n+  background-color: rgba(0, 0, 0, 0.5);\n+  display: flex;\n+  justify-content: center;\n+  align-items: center;\n+`\n+\n+const StyledContent = styled.div`\n+  background-color: white;\n+  padding: 20px;\n+  border-radius: 5px;\n+  max-height: 80%;\n+  overflow: auto;\n+`\n+\n+const StyledCloseButton = styled.button`\n+  background: none; /* Removes default background */\n+  border: none; /* Removes default border */\n+  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */\n+  outline: none; /* Removes the default focus outline */\n+  padding: \n+`\n+\n+interface ModalProps {\n+  children: ReactNode;\n+  onClose: () => void;\n+}\n+\n+export const Modal: React.FC<ModalProps> = ({ children, onClose }) => {\n+  return (\n+    <StyledOverlay className=\"modal-overlay\">\n+      <StyledContent className=\"modal-content\">\n+        <StyledCloseButton onClick={onClose}>\n+          <Close />\n+        </StyledCloseButton>\n+        {children}\n+      </StyledContent>\n+    </StyledOverlay>\n+  )\n+}\n"
+                }
+            ],
+            "date": 1720556825726,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport * as Dialog from '@radix-ui/react-dialog';\nimport { Cross2Icon } from '@radix-ui/react-icons';\nimport './styles.css';\n\nconst DialogDemo = () => (\n  <Dialog.Root>\n    <Dialog.Trigger asChild>\n      <button className=\"Button violet\">Edit profile</button>\n    </Dialog.Trigger>\n    <Dialog.Portal>\n      <Dialog.Overlay className=\"DialogOverlay\" />\n      <Dialog.Content className=\"DialogContent\">\n        <Dialog.Title className=\"DialogTitle\">Edit profile</Dialog.Title>\n        <Dialog.Description className=\"DialogDescription\">\n          Make changes to your profile here. Click save when you're done.\n        </Dialog.Description>\n        <fieldset className=\"Fieldset\">\n          <label className=\"Label\" htmlFor=\"name\">\n            Name\n          </label>\n          <input className=\"Input\" id=\"name\" defaultValue=\"Pedro Duarte\" />\n        </fieldset>\n        <fieldset className=\"Fieldset\">\n          <label className=\"Label\" htmlFor=\"username\">\n            Username\n          </label>\n          <input className=\"Input\" id=\"username\" defaultValue=\"@peduarte\" />\n        </fieldset>\n        <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>\n          <Dialog.Close asChild>\n            <button className=\"Button green\">Save changes</button>\n          </Dialog.Close>\n        </div>\n        <Dialog.Close asChild>\n          <button className=\"IconButton\" aria-label=\"Close\">\n            <Cross2Icon />\n          </button>\n        </Dialog.Close>\n      </Dialog.Content>\n    </Dialog.Portal>\n  </Dialog.Root>\n);\n\nexport default DialogDemo;"
+        }
+    ]
+}

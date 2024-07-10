@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".prettierrc",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1720581851182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1720581851182,
+            "name": "Commit-0",
+            "content": "{\n  \"semi\": true,\n  \"trailingComma\": \"es5\",\n  \"singleQuote\": true,\n  \"printWidth\": 80,\n  \"tabWidth\": 2,\n  \"useTabs\": false,\n  \"bracketSpacing\": true,\n  \"arrowParens\": \"avoid\",\n  \"endOfLine\": \"lf\"\n}"
+        }
+    ]
+}

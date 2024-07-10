@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/assets/file.svg",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1720568397100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1720568397100,
+            "name": "Commit-0",
+            "content": "<svg width=\"16\" height=\"16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2.5 2A1.5 1.5 0 0 1 4 .5h6.172a1.5 1.5 0 0 1 1.06.44l1.829 1.828.353-.354-.353.354a1.5 1.5 0 0 1 .439 1.06V14a1.5 1.5 0 0 1-1.5 1.5H4A1.5 1.5 0 0 1 2.5 14V2Z\" stroke=\"currentColor\"></path><rect x=\"5.25\" y=\"4.25\" width=\"5.5\" height=\"0.5\" rx=\"0.25\" stroke=\"currentColor\" stroke-width=\"0.5\"></rect><rect x=\"5.25\" y=\"7.25\" width=\"5.5\" height=\"0.5\" rx=\"0.25\" stroke=\"currentColor\" stroke-width=\"0.5\"></rect><rect x=\"5.25\" y=\"10.25\" width=\"3.5\" height=\"0.5\" rx=\"0.25\" stroke=\"currentColor\" stroke-width=\"0.5\"></rect></svg>"
+        }
+    ]
+}

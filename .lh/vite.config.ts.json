@@ -1,0 +1,26 @@
+{
+    "sourceFile": "vite.config.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1720571182087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720571209429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n-import { defineConfig } from 'vite'\n-import react from '@vitejs/plugin-react'\n+import { defineConfig } from \"vite\"\n+import react from \"@vitejs/plugin-react\"\n+import svgr from \"@svgr/rollup\"\n \n // https://vitejs.dev/config/\n export default defineConfig({\n-  plugins: [react(), svgr(),],\n+  plugins: [\n+    react(), svgr()],\n })\n"
+                },
+                {
+                    "date": 1720571215105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,13 @@\n \n // https://vitejs.dev/config/\n export default defineConfig({\n   plugins: [\n-    react(), svgr()],\n+    react({\n+      // Add the SVGR plugin here\n+      jsxImportSource: '@emotion/react',\n+      babel: {\n+        plugins: ['@emotion/babel-plugin'],\n+      },\n+    }),, \n+    svgr()],\n })\n"
+                }
+            ],
+            "date": 1720571182087,
+            "name": "Commit-0",
+            "content": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n  plugins: [react(), svgr(),],\n})\n"
+        }
+    ]
+}
