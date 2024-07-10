@@ -12,6 +12,7 @@ const TreeFolderName = styled.div`
   gap: 4px;
   padding: 6px 4px;
   width: 100%;
+  cursor: pointer;
 `
 
 const TreeText = styled.div`
@@ -31,6 +32,7 @@ const TreeTextEllipsis = styled.div`
 
 const TreeFileName = styled(TreeFolderName)`
   pointer-events: none;
+  cursor: not-allowed;
 `
 
 export const FileExplorerRow = ({

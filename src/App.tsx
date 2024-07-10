@@ -1,8 +1,8 @@
 import React, { useState } from "react"
+import { styled } from "styled-components"
 import { FileExplorer } from "./components/FileExplorer"
 import { FileExplorerProvider } from "./contexts/FileExplorer/FileExplorerProvider"
 import { Modal } from "./components/Modal"
-import { styled } from "styled-components"
 
 const StyledButton = styled.button`
   background: none;

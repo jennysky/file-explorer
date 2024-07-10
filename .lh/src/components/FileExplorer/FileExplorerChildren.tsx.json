@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/FileExplorer/FileExplorerChildren.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1720590524259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720590540593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,13 +32,31 @@\n const TreeFileName = styled(TreeFolderName)`\n   pointer-events: none;\n `\n \n-export const FileExplorer = ({\n+export const FileExplorerChildren = ({\n   item,\n }: {\n   item: ExplorerFile | ExplorerDirectory\n }) => {\n+  const renderChildren = ({\n+    children,\n+  }: {\n+    children: Array<ExplorerFile | ExplorerDirectory> | undefined\n+  }) => {\n+    return (\n+      <TreeChildren>\n+        {children?.map((item: ExplorerDirectory | ExplorerFile) =>\n+          item.type === \"directory\" ? (\n+            renderDirectory(item as ExplorerDirectory)\n+          ) : (\n+            <FileExplorerRow item={item} key={item.id} />\n+          ),\n+        )}\n+      </TreeChildren>\n+    )\n+  }\n+\n   const Container = item.type === \"directory\" ? TreeFolderName : TreeFileName\n   return (\n     <Container>\n       {item.type === \"directory\" ? <Folder /> : <File />}\n"
+                },
+                {
+                    "date": 1720590546071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   pointer-events: none;\n `\n \n export const FileExplorerChildren = ({\n-  item,\n+  children,\n }: {\n   item: ExplorerFile | ExplorerDirectory\n }) => {\n   const renderChildren = ({\n"
+                },
+                {
+                    "date": 1720590561630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \n export const FileExplorerChildren = ({\n   children,\n }: {\n-  item: ExplorerFile | ExplorerDirectory\n+  children: Array<ExplorerFile | ExplorerDirectory> | undefined\n }) => {\n   const renderChildren = ({\n     children,\n   }: {\n@@ -57,12 +57,15 @@\n   }\n \n   const Container = item.type === \"directory\" ? TreeFolderName : TreeFileName\n   return (\n-    <Container>\n-      {item.type === \"directory\" ? <Folder /> : <File />}\n-      <TreeText>\n-        <TreeTextEllipsis> {item.name}</TreeTextEllipsis>\n-      </TreeText>\n-    </Container>\n+    <TreeChildren>\n+      {children?.map((item: ExplorerDirectory | ExplorerFile) =>\n+        item.type === \"directory\" ? (\n+          renderDirectory(item as ExplorerDirectory)\n+        ) : (\n+          <FileExplorerRow item={item} key={item.id} />\n+        ),\n+      )}\n+    </TreeChildren>\n   )\n }\n"
+                },
+                {
+                    "date": 1720590568780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,26 +37,10 @@\n   children,\n }: {\n   children: Array<ExplorerFile | ExplorerDirectory> | undefined\n }) => {\n-  const renderChildren = ({\n-    children,\n-  }: {\n-    children: Array<ExplorerFile | ExplorerDirectory> | undefined\n-  }) => {\n-    return (\n-      <TreeChildren>\n-        {children?.map((item: ExplorerDirectory | ExplorerFile) =>\n-          item.type === \"directory\" ? (\n-            renderDirectory(item as ExplorerDirectory)\n-          ) : (\n-            <FileExplorerRow item={item} key={item.id} />\n-          ),\n-        )}\n-      </TreeChildren>\n-    )\n-  }\n \n+\n   return (\n     <TreeChildren>\n       {children?.map((item: ExplorerDirectory | ExplorerFile) =>\n         item.type === \"directory\" ? (\n"
+                }
+            ],
+            "date": 1720590524259,
+            "name": "Commit-0",
+            "content": "import React, { ReactNode } from \"react\"\nimport { styled } from \"styled-components\"\nimport { ReactComponent as Folder } from \"../../assets/folder.svg\"\nimport { ReactComponent as File } from \"../../assets/file.svg\"\n\nimport { ExplorerDirectory, ExplorerFile } from \"./FileExplorer\"\n\nconst TreeFolderName = styled.div`\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 4px;\n  padding: 6px 4px;\n  width: 100%;\n`\n\nconst TreeText = styled.div`\n  display: flex;\n  justify-content: flex-start;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  width: 100%;\n`\n\nconst TreeTextEllipsis = styled.div`\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n`\n\nconst TreeFileName = styled(TreeFolderName)`\n  pointer-events: none;\n`\n\nexport const FileExplorer = ({\n  item,\n}: {\n  item: ExplorerFile | ExplorerDirectory\n}) => {\n  const Container = item.type === \"directory\" ? TreeFolderName : TreeFileName\n  return (\n    <Container>\n      {item.type === \"directory\" ? <Folder /> : <File />}\n      <TreeText>\n        <TreeTextEllipsis> {item.name}</TreeTextEllipsis>\n      </TreeText>\n    </Container>\n  )\n}\n"
+        }
+    ]
+}

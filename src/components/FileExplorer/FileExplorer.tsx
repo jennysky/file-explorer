@@ -19,9 +19,10 @@ export interface ExplorerDirectory {
   children?: Array<ExplorerFile | ExplorerDirectory>
 }
 
-const TreeContainer = styled.div`
+const TreeContainer = styled.div<{$disabled: boolean}>`
   display: flex;
   flex-direction: column;
+  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
 `
 
 const TreeChildren = styled.div`
@@ -59,7 +60,7 @@ export const FileExplorer: React.FC = () => {
     const children = folderChildrenById[dir.id]
     const isOpen = openFolderById[dir.id]
     return (
-      <TreeContainer key={dir.id} onClick={(e) => handleToggle(e, dir)}>
+      <TreeContainer key={dir.id} onClick={(e) => handleToggle(e, dir)} $disabled={isOpen && !children}>
         <FileExplorerRow item={dir} />
         {isOpen && (
           <>

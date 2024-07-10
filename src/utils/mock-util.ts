@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid"
 export const waitFor = async (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms))
 
-function createFile(id: number): ExplorerFile {
+function createFile(id: string): ExplorerFile {
   return {
     id: `file-${id}`,
     name: `File-${id}.txt`,
@@ -13,7 +13,7 @@ function createFile(id: number): ExplorerFile {
 }
 
 function createDirectory(
-  id: number,
+  id: string,
   children: Array<ExplorerFile | ExplorerDirectory>,
 ): ExplorerDirectory {
   return {
@@ -60,7 +60,6 @@ export const getFolderMockData = (id: string): ExplorerDirectory => {
       }
     }),
   }
-  console.log("getFolderMockData", folder)
   return folder
 }
 
@@ -76,7 +75,7 @@ export const initData: ExplorerDirectory = {
     },
     {
       id: "dir-d1e30730-2717-4cf4-bd3f-c1cbe13c015b",
-      name: "Folderd-1e30730-2717-4cf4-bd3f-c1cbe13c015b",
+      name: "Folder-d1e30730-2717-4cf4-bd3f-c1cbe13c015b",
       type: "directory",
     },
     {
