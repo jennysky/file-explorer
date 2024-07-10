@@ -11,9 +11,11 @@ const StyledButton = styled.button`
   outline: none;
   padding: 4px;
   color: black;
+  border: 1px solid black;
+  border-radius: 5px;
 `
 
-const StyledContainer = styled.button`
+const StyledContainer = styled.div`
   margin: 20px;
 `
 

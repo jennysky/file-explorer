@@ -1,8 +1,7 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { styled } from "styled-components"
 import { ReactComponent as Folder } from "../../assets/folder.svg"
 import { ReactComponent as File } from "../../assets/file.svg"
-
 import { ExplorerDirectory, ExplorerFile } from "./FileExplorer"
 
 const TreeFolderName = styled.div`
@@ -11,17 +10,7 @@ const TreeFolderName = styled.div`
   align-items: center;
   gap: 4px;
   padding: 6px 4px;
-  width: 100%;
   cursor: pointer;
-`
-
-const TreeText = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
 `
 
 const TreeTextEllipsis = styled.div`
@@ -35,6 +24,14 @@ const TreeFileName = styled(TreeFolderName)`
   cursor: not-allowed;
 `
 
+const StyledFile = styled(File)`
+  flex-shrink: 0;
+`
+
+const StyledFolder = styled(Folder)`
+  flex-shrink: 0;
+`
+
 export const FileExplorerRow = ({
   item,
 }: {
@@ -43,10 +40,8 @@ export const FileExplorerRow = ({
   const Container = item.type === "directory" ? TreeFolderName : TreeFileName
   return (
     <Container>
-      {item.type === "directory" ? <Folder /> : <File />}
-      <TreeText>
-        <TreeTextEllipsis> {item.name}</TreeTextEllipsis>
-      </TreeText>
+      {item.type === "directory" ? <StyledFolder /> : <StyledFile />}
+      <TreeTextEllipsis>{item.name}</TreeTextEllipsis>
     </Container>
   )
 }
