@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1720581632018,
@@ -48,6 +48,34 @@
                 {
                     "date": 1720590139665,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n # React + TypeScript + Vite\n- to install use node v18.19.0\n+o install use node v18.19.0\n \n \n To run the project: \n \n ```\n npm i\n npm run dev\n-\n+```\n"
+                },
+                {
+                    "date": 1720594209695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n # React + TypeScript + Vite\n-o install use node v18.19.0\n+To install use node 18 v18.19.0\n \n \n To run the project: \n \n"
+                },
+                {
+                    "date": 1720594214870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n # React + TypeScript + Vite\n-To install use node 18 v18.19.0\n+To install use node 18 \n+usedv18.19.0\n \n \n To run the project: \n \n"
+                },
+                {
+                    "date": 1720594220666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # React + TypeScript + Vite\n To install use node 18 \n-usedv18.19.0\n+used node version: v18.19.0\n \n \n To run the project: \n \n"
+                },
+                {
+                    "date": 1720594226405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n # React + TypeScript + Vite\n-To install use node 18 \n+To install use node 18 .\n used node version: v18.19.0\n \n \n To run the project: \n"
+                },
+                {
+                    "date": 1720594239233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n To install use node 18 .\n used node version: v18.19.0\n \n \n-To run the project: \n+#To run the project: \n \n ```\n npm i\n npm run dev\n"
+                },
+                {
+                    "date": 1720594245434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n # React + TypeScript + Vite\n-To install use node 18 .\n+### To install use node 18 .\n used node version: v18.19.0\n \n \n-#To run the project: \n+# To run the project: \n \n ```\n npm i\n npm run dev\n"
+                },
+                {
+                    "date": 1720594253126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n # React + TypeScript + Vite\n+\n ### To install use node 18 .\n used node version: v18.19.0\n \n \n"
                 }
             ],
             "date": 1720581632018,
