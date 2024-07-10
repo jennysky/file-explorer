@@ -3,7 +3,7 @@ import { getFolderMockData, initData, waitFor } from "../utils/mock-util"
 
 export const fetchRootDirectoryService = async () => {
   await waitFor(1000)
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     resolve(initData)
   })
 }
@@ -12,7 +12,7 @@ export const fetchDirectoryService = async (
   id: string,
 ): Promise<ExplorerDirectory> => {
   await waitFor(1000)
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     resolve(getFolderMockData(id))
   })
 }

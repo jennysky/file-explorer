@@ -1,5 +1,5 @@
 import React from "react"
-import { useFileExplorer } from "../../contexts/FileExplorer/FileExplorerProvider"
+import { useFileExplorer } from "../../contexts/FileExplorer"
 import { styled } from "styled-components"
 import { MainSpinner } from "../Spinner/MainSpinner"
 import { Spinner } from "../Spinner"

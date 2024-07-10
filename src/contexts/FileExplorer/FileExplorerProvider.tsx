@@ -1,6 +1,5 @@
 import React, {
   createContext,
-  useContext,
   useState,
   ReactNode,
   useEffect,
@@ -14,7 +13,7 @@ import {
   fetchDirectoryService,
 } from "../../services/api-service"
 
-interface FileExplorerContextType {
+export interface FileExplorerContextType {
   root: ExplorerDirectory | undefined
   openFolderById: Record<string, boolean>
   toggleDirectory: (id: string) => void
@@ -25,9 +24,10 @@ interface FileExplorerContextType {
   fetchDirectory: (id: string) => void
 }
 
-const FileExplorerContext = createContext<FileExplorerContextType | undefined>(
+export const FileExplorerContext = createContext<FileExplorerContextType | undefined>(
   undefined,
 )
+
 
 export const FileExplorerProvider: React.FC<{
   children: ReactNode
@@ -36,7 +36,7 @@ export const FileExplorerProvider: React.FC<{
 
   useEffect(() => {
     fetchRootDirectoryService().then((data) => {
-      setRoot(data)
+      setRoot(data as ExplorerDirectory)
     })
   }, [])
 
@@ -79,10 +79,3 @@ export const FileExplorerProvider: React.FC<{
   )
 }
 
-export const useFileExplorer = () => {
-  const context = useContext(FileExplorerContext)
-  if (context === undefined) {
-    throw new Error("useFileExplorer must be used within a FileExplorerProvider")
-  }
-  return context
-}
